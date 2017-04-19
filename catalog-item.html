@@ -16,7 +16,7 @@
                     <li><a href="#">Информация</a></li>
                     <li><a href="#">Новости</a></li>
                     <li><a href="#">Прайс-лист</a></li>
-                    <li><a href="#">Магазин</a></li> <!--тут мы вроде не в магазине, а еще глубже - в подменю магазина. Если нажать на магазин, то мы вылезем на первый уровень?-->
+                    <li><a href="#">Магазин</a></li> <!--тут мы вроде не в магазине, а еще глубже - в подменю магазина. Если нажать на магазин, то мы вылезем на первый уровень? По макету так. Это активный пункт. Но да если нажмем, то попадем в магазин-->
                     <li><a href="#">Контакты</a></li>
                 </ul>
                 <div class="user-block">
@@ -25,6 +25,7 @@
             </div>
         </header>
         <main class="container">
+            <!-- Замечания по этому блоку такие же как в каталоге -->
             <h1>Средства для ухода</h1>
             <div class="breadcrumbs">
                 <span><a href="">Главная</a></span>
@@ -32,25 +33,29 @@
                 <span><a href="">Средства для ухода</a></span>
                 <span><a href="">Набор для путешествий «Baxter of California»</a></span>  <!--Макеев предлагает логические ссылки, чтобы страница не ссылалась сама на себя. Стоит ли? И что лучше выбрать span или b?-->
             </div>
+            <!-- Эти два нижних блока надо обернуть в общий блок, для позиционирования -->
             <div class="item-content-left"><!--нужен ли здесь этот контейнер и нужно ли его добавить на страницу с фильтрами или там можно задать положение форме и секции?-->
-                <section class="gallery">
-                    <img src="http://placehold.it/150x100" alt="Baxter of California" width="" height="">
+                <section class="gallery"><!-- Это лишнее -->
+                    <img src="http://placehold.it/150x100" alt="Baxter of California" width="" height=""><!-- Большую фотографию оберни в блок -->
+                    <!-- Три мелких фотографии оберни в общий блок. Каждую фотогарфию оберни в ссылку -->
                     <img src="http://placehold.it/150x100" alt="Baxter of California" width="" height="">
                     <img src="http://placehold.it/150x100" alt="Baxter of California" width="" height="">
                     <img src="http://placehold.it/150x100" alt="Baxter of California" width="" height=""><!--Нужно ли тут в alt прописывать более подробно описание фото?-->
+                    <!-- Да было бы не плохо, но в рамках данного инетнсива это ни необходимо. И обычно картинки добавляют разные и описание мало кто пишет :-))) -->
                 </section>
             </div>
             <div class="item-content-right">
-                <section class="item-description">
+                <section class="item-description"><!-- Это не секция, это div -->
+                    <!-- Наличие и артикул оберни в общий блок, для позиционирования -->
                     <span>Есть в наличии</span>
                     <span>Артикул: Dexter AE</span>
                     <p>Travel Kit — необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
                 </section>
-                <section class="item-price">
+                <section class="item-price"><!-- Это не секция, это div -->
                     <a href="#" class="btn">2 900 руб.</a>                       
                     <a href="#" class="btn">Купить</a>
                 </section>
-                <section class="item-composition">
+                <section class="item-composition"><!-- Если это секци, то ниже заголовок -->
                     <span>В набор входят:</span>
                     <ul>
                         <li>Средство для умывания (50 мл)</li>
@@ -62,7 +67,7 @@
                 </section>
             </div>   
         </main>
-        <footer class="main-footer"><!-- Это main-footer или page-footer? Они вроде одинаковые-->
+        <footer class="main-footer"><!-- Это main-footer или page-footer? Они вроде одинаковые--><!-- Да они одинаковые. Твой вопрос касательно одинаковые они или нет. Да должен быть один и тот же класс на всех страницах. Т.к. блоки одинаковые-->
             <div class="container">
                 <section class="footer-contacts">
                     Барбершоп «Бородинский»<br>

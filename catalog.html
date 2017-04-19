@@ -26,47 +26,74 @@
         </header>
    
         <main class="container">
+            <!-- Я бы рекомендовал обернуть h1 и список в общий блок, для задания ему отступов. Это по желанию -->
             <h1>Средства для ухода</h1>
-            <div class="breadcrumbs">
-                <span><a href="">Главная</a></span>
+            <div class="breadcrumbs"><!-- Обычно это список -->
+                <span><a href="">Главная</a></span><!-- А это li -->
                 <span><a href="">Магазин</a></span> 
-                <span><a>Средства для ухода</a></span> <!--Макеев предлагает логические ссылки, чтобы страница не ссылалась сама на себя. Стоит ли? И что лучше выбрать span или b?-->
+                <span><a>Средства для ухода</a></span> <!--Макеев предлагает логические ссылки, чтобы страница не ссылалась сама на себя. Стоит ли? И что лучше выбрать span или b?--><!-- Да можно использовать логические ссылки -->
             </div>
-
+            <!-- Блок фильтра и каталог товаров с постраничной навигацией оберни в общий блок. Вот схема как это должно быть http://prntscr.com/ex67js -->
             <form class="filter" action="https://echo.htmlacademy.ru" method="post">
-            <span class="filter-title">Производители:</span><br>
-                <input type="checkbox" name="producer" value="Baxter of california" id="Baxter_of_california" checked>
+                <!-- Внутри формы идут две секции <section> и кнопка за ними -->
+                <!-- Внутри каждой секции заголовок -->
+                <span class="filter-title">Производители:</span><br>
+                <input type="checkbox" name="producer" value="Baxter of california" id="Baxter_of_california" checked><!-- Всё верно -->
                 <label for="Baxter_of_california">Baxter of california</label> <!--Я тут запуталась в том, что ставить name, value, id. Можно ли от чего то избавиться и надо ли?-->
+                <!-- Объясняю: id - нужен чтобы связать форму и label между собой. name и value нужны, потому что на сервер отправляется пара ключ=значение, в нашем случае name=value -->
                 <br><!--Нормально ли разделять группу чекбоксов br'ками, если потом задать размер форме и задать margin для span'ов, может от них можно будет избавиться?-->
+                <!-- br - лишние!!! -->
                 <input type="checkbox" name="producer" value="Mr Natty" id="Mr_Natty">
                 <label for="Mr_Natty">Mr Natty</label>
-                <br>
+                <br><!-- br - лишние!!! -->
                  <input type="checkbox" name="producer" value="Suavecito" id="Suavecito" checked>
                 <label for="Suavecito">Suavecito</label>
-                <br>
+                <br><!-- br - лишние!!! -->
                  <input type="checkbox" name="producer" value="Malin+Goetz" id="Malin+Goetz">
                 <label for="Malin+Goetz">Malin+Goetz</label>
-                <br>
+                <br><!-- br - лишние!!! -->
                  <input type="checkbox" name="producer" value="Murray's" id="Murray's">
                 <label for="Murray's">Murray's</label>
-                <br>
+                <br><!-- br - лишние!!! -->
                  <input type="checkbox" name="producer" value="American Crew" id="American_Crew" checked>
                 <label for="American_Crew">American Crew</label>
-                <br>
+                <br><!-- br - лишние!!! -->
+                <!-- Вторая секция, с заголовоком -->
                 <span class="filter-title">Группы товаров:</span><br>
                 <input type="radio" name="type of goods" value="shave" id="shave" checked>
                 <label for="shave">Бритвенные принадлежности</label>
-                <br>
+                <br><!-- br - лишние!!! -->
                 <input type="radio" name="type of goods" value="care" id="care">
                 <label for="care">Средства для ухода</label>
-                <br>
+                <br><!-- br - лишние!!! -->
                 <input type="radio" name="type of goods" value="accessories" id="accessories">
                 <label for="accessories">Аксессуары</label>
-                <br>
-                <button type="submit"></button><!--нужен ли name и value?-->
+                <br><!-- br - лишние!!! -->
+                <button type="submit"></button><!--нужен ли name и value?--><!-- Нужен просто текст внутри кнопки -->
             </form>
+            <!-- Каталог и пагинацию оберни в общий блок, для позиционирования -->
             <section class="catalog">
                 <article class="catalog-item">
+                    <!-- Обозначу разметку на скриншоте http://prntscr.com/ex6bdd -->
+                    <!-- Пример разметки без классов и контента
+                      <article>
+                         <a href="">
+                             <img src="" alt="">
+                         </a>
+                         <div>
+                             <h4>
+                                 <a href="">
+                                     <span></span>
+                                     <span></span>
+                                 </a>
+                             </h4>
+                             <div>
+                                 <span></span>
+                                 <a href=""></a>
+                             </div>
+                         </div>
+                     </article>  
+                     -->
                      <img src="http://placehold.it/150x100" alt="Набор для путешествий «Baxter of California»" width="" height="">
                      <h4>Набор для путешествий «Baxter of California»</h4>
                      <a href="#" class="btn">2 900 руб.</a>
@@ -106,6 +133,7 @@
             <div class="paginator">
             <a href="#">1</a>
             <a href="#">2</a><!--тут по идее тоже ссылку надо убирать? Как это прописать, если у нас, например, 100 страниц на сайте?-->
+            <!-- Лучше не ссылку а href - пустой, а вообще это делается программно, на php, если он используется -->
             <a href="#">3</a>
             <a href="#">4</a>
         </div>
