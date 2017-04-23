@@ -3,13 +3,14 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Барбершоп</title>
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="page-header">
             <div class="container">
                 <div class="header-logo">
                     <a href="http://barbershop.ru/">
-                        <img src="http://placehold.it/150x100" alt="Barbershop" width="" height="">
+                        <img src="img/header-logo.png" width="111px" height="24px">
                     </a>
                 </div>
                 <ul class="page-nav">
@@ -35,9 +36,9 @@
                 </ul>
             </div>
             <div class="page-content">
-                <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+                <form class="filter" action="https://echo.htmlacademy.ru" method="get">
                     <section class="filter-section">
-                        <h2>Производители:</h2><br>
+                        <h2>Производители:</h2>
                         <input type="checkbox" name="producer" value="Baxter of california" id="Baxter_of_california" checked>
                         <label for="Baxter_of_california">Baxter of california</label>
                         <input type="checkbox" name="producer" value="Mr Natty" id="Mr_Natty">
@@ -52,7 +53,7 @@
                         <label for="American_Crew">American Crew</label>
                     </section>
                     <section class="filter-section">
-                        <h2>Группы товаров:</h2><br>
+                        <h2>Группы товаров:</h2>
                         <input type="radio" name="type of goods" value="shave" id="shave" checked>
                         <label for="shave">Бритвенные принадлежности</label>
                         <input type="radio" name="type of goods" value="care" id="care">
@@ -66,15 +67,15 @@
                     <section class="catalog">
                         <article class="catalog-item">
                             <a href="#">
-                                <img class="item-img" src="http://placehold.it/150x100" alt="Набор для путешествий «Baxter of California»" width="" height="">
+                                <img class="item-img" src="img/baxter-kit.jpg" alt="Набор для путешествий «Baxter of California»" width="220px" height="165px">
                             </a>
                             <div class="item-descr">
-                                <h4>
+                                <h2>
                                     <a href="#">
                                         <span>Набор для путешествий</span>
                                         <span>«Baxter of California»</span>
                                     </a>
-                                </h4>
+                                </h2>
                                 <div class="item-buy-price">
                                     <span>2 900 руб.</span>
                                     <a href="#" class="btn">Купить</a>
@@ -83,15 +84,15 @@
                         </article>
                          <article class="catalog-item">
                             <a href="#">
-                                <img class="item-img" src="http://placehold.it/150x100" alt="Увлажняющий кондиционер «Baxter of California»" width="" height="">
+                                <img class="item-img" src="img/baxter-moist.jpg" alt="Увлажняющий кондиционер «Baxter of California»" width="220px" height="165px">
                             </a>
                             <div class="item-descr">
-                                <h4>
+                                <h2>
                                     <a href="#">
                                         <span>Увлажняющий кондиционер</span>
                                         <span>«Baxter of California»</span>
                                     </a>
-                                </h4>
+                                </h2>
                                 <div class="item-buy-price">
                                     <span>750 руб.</span>
                                     <a href="#" class="btn">Купить</a>
@@ -100,15 +101,15 @@
                         </article>
                         <article class="catalog-item">
                             <a href="#">
-                                <img class="item-img" src="http://placehold.it/150x100" alt="Гель для волос «Sauvecito»" width="" height="">
+                                <img class="item-img" src="img/suavecito-gel.jpg" alt="Гель для волос «Sauvecito»" width="220px" height="165px">
                             </a>
                             <div class="item-descr">
-                                <h4>
+                                <h2>
                                     <a href="#">
                                         <span>Увлажняющий кондиционер</span>
                                         <span>«Sauvecito»</span>
                                     </a>
-                                </h4>
+                                </h2>
                                 <div class="item-buy-price">
                                     <span>290 руб.</span>
                                     <a href="#" class="btn">Купить</a>
@@ -117,15 +118,15 @@
                         </article>
                         <article class="catalog-item">
                             <a href="#">
-                                <img class="item-img" src="http://placehold.it/150x100" alt="Глина для укладки волос «American Crew»" width="" height="">
+                                <img class="item-img" src="img/American-crew-clay.jpg" alt="Глина для укладки волос «American Crew»" width="220px" height="165px">
                             </a>
                             <div class="item-descr">
-                                <h4>
+                                <h2>
                                     <a href="#">
                                         <span>Глина для укладки волос</span>
                                         <span>«American Crew»"</span>
                                     </a>
-                                </h4>
+                                </h2>
                                 <div class="item-buy-price">
                                     <span>500 руб.</span>
                                     <a href="#" class="btn">Купить</a>
@@ -134,15 +135,15 @@
                         </article>
                         <article class="catalog-item">
                             <a href="#">
-                                <img class="item-img" src="http://placehold.it/150x100" alt="Гель для волос «American Crew»" width="" height="">
+                                <img class="item-img" src="img/American-crew-gel.jpg" alt="Гель для волос «American Crew»" width="220px" height="165px">
                             </a>
                             <div class="item-descr">
-                                <h4>
+                                <h2>
                                     <a href="#">
                                         <span>Гель для волос</span>
                                         <span>«American Crew»"</span>
                                     </a>
-                                </h4>
+                                </h2>
                                 <div class="item-buy-price">
                                     <span>300 руб.</span>
                                     <a href="#" class="btn">Купить</a>
@@ -151,15 +152,15 @@
                         </article>
                         <article class="catalog-item">
                             <a href="#">
-                                <img class="item-img" src="http://placehold.it/150x100" alt="Набор для бритья «Baxter of California»" width="" height="">
+                                <img class="item-img" src="img/baxter-kit-shave.jpg" alt="Набор для бритья «Baxter of California»" width="220px" height="165px">
                             </a>
                             <div class="item-descr">
-                                <h4>
+                                <h2>
                                     <a href="#">
                                         <span>Набор для бритья</span>
                                         <span>«Baxter of California"</span>
                                     </a>
-                                </h4>
+                                </h2>
                                 <div class="item-buy-price">
                                     <span>3 900 руб.</span>
                                     <a href="#" class="btn">Купить</a>
@@ -169,7 +170,7 @@
                     </section>
                     <div class="paginator">
                     <a href="#">1</a>
-                    <a href="">2</a>
+                    <a class="paginator-active">2</a>
                     <a href="#">3</a>
                     <a href="#">4</a>
                     </div>
