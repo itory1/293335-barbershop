@@ -39,7 +39,7 @@ body {
     outline: 1px solid red;
 }
 
-.clearfix {
+.clearfix::after {
     display: table;
     clear: both;
 
@@ -86,8 +86,7 @@ body {
     float: left;
 
     width: 220px;
-    margin-right: 20px; /*тут я совсем не понимаю кто кого должен отталкивать. Фильтр правую секцию или наоборот. По макету вроде так. 
-    И есть ли у них паддинги и как посчитать?*/
+    /* margin-right: 20px; Можно тут не ставить маргин. Потому что у правой секции float:right;*/
 }
 
 .right-section {
@@ -99,8 +98,6 @@ body {
 
 .filter-section label {
     display: block;
-
-    vertical-align: top; /*тут нужен какое-то вертикальное выравнивание?*/
 }
 
 .catalog {
@@ -177,7 +174,8 @@ body {
     margin-right: 20px;
 }
 
-.gallery-img-previews a:last-child {
+.gallery-img-previews a:nth-child(3n) { /*тут обязательно ставить :nth-child(3n), а не last, так как при добавлении еще элемента, он не влезет 
+    и не пройдет проверку на переполнение*/
     margin-right: 0px;
 }
 
