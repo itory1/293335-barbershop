@@ -24,3 +24,163 @@ body {
 
     color: #000;
 }
+
+.page-header {
+    min-height: 70px;
+
+    outline: 1px solid blue;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    outline: 1px solid red;
+}
+
+.clearfix::after {
+    display: table;
+    clear: both;
+
+    content: '';
+}
+
+.page-header {
+    /*лучше, чтобы верхний толкал нижний элемент, поэтому margin-bottom. Посчитала так: по макету до заголовка 60px, учитывая интерлиньяж, вычла 6px.*/
+    margin-bottom: 54px;
+}
+
+.header-logo {
+    float: left;
+
+    width: 111px;
+
+    outline: 1px solid black;/* на вебинаре советуют лого пихать в блок навигации. а у нас он отдельно. в чем разница?*/
+}
+
+
+
+.page-nav {
+    float: left;
+
+    width: 640px;
+
+    outline: 1px solid yellow;
+}
+
+.user-block {
+    float: right;
+
+    width: 140px;
+
+    outline: 1px solid green;
+}
+
+
+.page-title {
+    margin-bottom: 55px; /*60-2-3=55 интерлиньяж между двумя текстами*/
+}
+
+.filter {
+    float: left;
+
+    width: 220px;
+    /* margin-right: 20px; Можно тут не ставить маргин. Потому что у правой секции float:right;*/
+}
+
+.right-section {
+    float: right;
+
+    width: 700px;
+    margin-bottom: 20px;
+}
+
+.filter-section label {
+    display: block;
+}
+
+.catalog {
+    font-size: 0; /*все верно?*/
+}
+
+.catalog-item {
+    font-size: 14px;
+
+    display: inline-block;
+
+    width: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    vertical-align: top;
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.main-footer {
+    margin-top: 65px; /*у последнего блока можем ставить маргин-топ*/
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    outline: 1px solid green;
+}
+
+.footer-contacts {
+    float: left;
+
+    width: 320px;
+    min-height: 90px;
+    margin-right: 60px;
+}
+
+.footer-social {
+    float: left;
+
+    width: 180px;
+    min-height: 90px;
+}
+
+.footer-copyright {
+    float: right;
+
+    width: 180px;
+    min-height: 90px;
+}
+
+.gallery {
+    width: 460px;
+    outline: 1px solid green;
+    float: left;
+
+}
+
+.gallery-img-full {
+    outline: 1px solid red;
+
+}
+
+.gallery-img-previews {
+    font-size: 0px;
+}
+
+.gallery-img-previews a{ /*задаем настройки для ссылок, а не для картинок!*/
+    outline: 1px solid yellow;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 140px;
+    margin-right: 20px;
+}
+
+.gallery-img-previews a:nth-child(3n) { /*тут обязательно ставить :nth-child(3n), а не last, так как при добавлении еще элемента, он не влезет 
+    и не пройдет проверку на переполнение*/
+    margin-right: 0px;
+}
+
+.item-content-right {
+    float: right;
+    width: 390px;
+    outline: 1px solid green;
+}
