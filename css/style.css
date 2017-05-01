@@ -1,10 +1,24 @@
 body {
-    font-family: 'PT Sans Narrow';
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
 
-    color: #000;
+    min-width: 960px;
+    margin: 0; /*надо ли тут обнулять паддинг и маргин?*/
+    padding: 0;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #000 url('../img/main-background.jpg') no-repeat center top;
+}
+
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .page-title h1 {
@@ -25,18 +39,332 @@ body {
     color: #000;
 }
 
-.page-header {
-    min-height: 70px;
+.main-header {
+    margin-bottom: 60px;
 
-    outline: 1px solid blue;
+    color: #fff;
+    background-color: #000;
 }
+
+.main-navigation {
+    float: left;
+
+    width: 780px;
+}
+
+.main-navigation a {
+    display: block; /*по умлочанию ссылка - строчная. задаем блок*/
+
+    padding: 25px 20px; /*вешаем не на li, а на ссылку - активный элемент. 
+    Именно на ссылку кликает юзер, а не на li*/
+
+    text-decoration: none;
+
+    color: #fff; /*можно четко прописать, можно inherit от body*/
+}
+
+.main-navigation a:hover {
+    background: #242424;
+}
+
+.main-navigation ul {
+    font-size: 0;
+
+    margin: 0; /*обнуляем у каждого списка отдельно. Нельзя у всех списков сразу*/
+    padding: 0;
+
+    list-style: none;
+}
+
+.main-navigation li {
+    font-size: 16px;
+    line-height: 20px;/*обнулили для инлайнов шрифт родителя, задали ребенку*/
+
+    display: inline-block; /*всегда, когда есть инлайн, ставим вертикальное выравнивание*/
+
+    vertical-align: top;
+}
+
+
+.user-block {
+    float: right;
+
+    max-width: 140px; /*max-width - блок будет ужиматься под контент (флоат), но при этом сделали запас на переполнение? По макету он меньше, чем 140px*/
+}
+
+.login {
+    /*login - это класс ссылки, то есть снова стилизуем ссылку*/
+    font-size: 16px;
+    line-height: 20px;
+
+    position: relative; /*задаем, чтобы удобнее распологать внутри элемента иконку*/
+
+    display: inline-block;
+
+    padding: 25px 20px;
+    padding-left: 50px; /*место для икоки со стайлгайда*/
+
+    vertical-align: top;
+    text-decoration: none;
+
+
+    color: #fff;
+}
+
+.login:hover {
+    background-color: #242424;
+}
+
+.login::before {
+    position: absolute; /*псевдоэлемент строчный при добавлении абсолюта ведет себя как блочный*/
+    top: 28px; /*померили расположение иконки с макета*/
+    left: 20px;
+
+    width: 18px;
+    height: 18px; /*размеры иконки*/
+
+    content: '';
+
+    opacity: .3;
+    background: url('../img/icon-login.png') no-repeat;
+}
+
+.login:hover::before {
+    /*псевдоэлементу нельзя hover задать, идем через родителя*/
+    opacity: 1; /*меняем поведение при наведениий*/
+}
+
+.index-logo {
+    width: 368px;
+    height: 204px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+.features {
+    margin-bottom: 65px;
+}
+
+.features-item {
+    float: left;
+
+    width: 300px;
+    margin-right: 20px;
+
+    text-align: center;
+}
+
+.features-item:last-child {
+    margin-right: 0;
+}
+
+.features-name {
+    font-size: 30px;
+    line-height: 42px;
+
+    position: relative;
+
+    display: block; /*чтобы задать отступы*/
+
+    margin-bottom: 30px; /*65=30+35 - это отступ между текстовыми блоками с учетом интерлиньяжа*/
+    padding-bottom: 35px; /*разделили отступ на паддинг (защита от переполнения, так как ромбик живет в паддинге) и марджин, чтобы удобнее было позиционировать ромбик*/
+}
+
+.features-item p {
+    margin: 10px; /*верхний отступ можно не обнулять, он схлопнется все равно*/
+    margin-bottom: 0; /*нижний по макету обнуляем*/
+}
+
+.features-name::after {
+    position: absolute;
+    bottom: 0; /*край паддинга*/
+    left: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+
+    content: '';
+    transform: rotate(45deg);
+
+    background-color: #fff;
+}
+
+.index-content {
+    margin-bottom: 35px;
+    padding: 50px 80px;
+
+    color: #000; /*еще раз. Всегда прописываем фон и текст*/
+    background: url('../img/shadow.png') no-repeat center, #f8f5f2 url('../img/background-noise.jpg'); /*тенюшка + фон картинкой и похожий цвет на случай косяка*/
+}
+
+.index-content-left {
+    float: left;
+
+    width: 380px;
+}
+
+.index-content-right {
+    float: right;
+
+    width: 300px;
+}
+
+
+.index-content-title {
+    font-size: 30px;
+    line-height: 42px;
+
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.index-content p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.news-preview {
+    margin: 0;
+    padding: 0;
+    padding-right: 35px;
+
+    list-style: none;
+}
+
+.news-preview li {
+    margin-bottom: 25px;
+}
+
+.news-preview p {
+    margin-bottom: 0;
+}
+
+.news-preview time {
+    text-transform: none;
+}
+
+.btn {
+    /*класс прописываем для кнопок и ссылок, поэтому учитываем их особенности*/
+    font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+
+    display: inline-block;
+
+    margin-right: 16px; /*тут у блочно-строчных можно не обнулять фонт сайз, прсто задаем доп маргин*/
+    padding: 10px 33px;
+
+    cursor: pointer; /*для кнопок*/
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    border: none; /*для кнопок*/
+    background-color: #000;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+    cursor: default;
+
+    opacity: .5;
+}
+
+.btn.disabled:hover,
+/*атрибут для кнопок, класс для ссылок*/
+.btn:disabled:hover {
+    background-color: #000;
+}
+
+.index-gallery {
+    position: relative;
+
+    height: 260px;
+}
+
+.index-gallery-content {
+    height: 164px;
+    margin: 0;
+
+    border: 7px solid #fff;
+    background-color: #ccc;
+}
+
+.index-gallery-content img {
+    width: 286px;
+    height: 164px;
+}
+
+.index-gallery .btn {
+    position: absolute;
+    bottom: 0;
+
+    width: 140px;
+    margin: 0;
+}
+
+.gallery-prev {
+    left: 0;
+}
+
+.gallery-next {
+    right: 0;
+}
+
+.appointment-form input {
+    font: inherit; /*так быстрее, чем все прописывать, и защищает от изменений в макете*/
+
+    float: left; /*задаем блочность строчным инпутам*/
+    /*font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color: #000;
+    text-transform: uppercase;*/
+
+    width: 106px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 7px 15px;
+
+    text-transform: inherit;
+
+    color: inherit;
+    border: 2px solid #000;
+    background-color: #f9f6f3;
+}
+
+.appointment-form input:focus {
+    border: 2px solid #663d15;
+}
+
+.appointment-form input:nth-child(2n) {
+    margin-right: 0;
+}
+.appointment-form .btn {
+    clear: both; /*чтобы видел флоатные поля*/
+
+    width: 100%;
+}
+
+
+
+
 
 .container {
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-
-    outline: 1px solid red;
 }
 
 .clearfix::after {
@@ -67,14 +395,6 @@ body {
     width: 640px;
 
     outline: 1px solid yellow;
-}
-
-.user-block {
-    float: right;
-
-    width: 140px;
-
-    outline: 1px solid green;
 }
 
 
@@ -125,62 +445,139 @@ body {
     padding-top: 60px;
     padding-bottom: 40px;
 
-    outline: 1px solid green;
+    color: #fff;
+    background: #252525 url('../img/index-footer-noise.png');
 }
 
 .footer-contacts {
     float: left;
 
     width: 320px;
-    min-height: 90px;
     margin-right: 60px;
+}
+
+.footer-contacts a {
+    color: #fff;
+}
+
+.footer-contacts a:hover {
+    text-decoration: none;
 }
 
 .footer-social {
     float: left;
 
     width: 180px;
-    min-height: 90px;
+
+    text-align: center;
+}
+
+.footer-social p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    font-size: 0;
+
+    display: inline-block;
+
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;
+
+    vertical-align: top;
+    text-decoration: none;
+
+    background: #000 url('../img/sprites.png') no-repeat center;
+}
+
+
+.social-btn-vk {
+    background-position: -44px 14px;
+}
+
+.social-btn-fb {
+    background-position: -82px 9px;
+}
+
+.social-btn-inst {
+    background-position: 10px 8px;
+}
+
+.social-btn:hover {
+    background-color: #fff;
+}
+
+.social-btn-vk:hover {
+    background-position: -40px -40px;
+}
+
+.social-btn-fb:hover {
+    background-position: -83px -41px;
+}
+
+.social-btn-inst:hover {
+    background-position: 11px -39px;
 }
 
 .footer-copyright {
     float: right;
 
-    width: 180px;
-    min-height: 90px;
+    max-width: 180px;
 }
 
+.footer-copyright p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.footer-copyright .btn {
+    margin-right: 0;
+}
+
+.footer-copyright .btn:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+
 .gallery {
-    width: 460px;
-    outline: 1px solid green;
     float: left;
 
+    width: 460px;
 }
 
 .gallery-img-full {
     outline: 1px solid red;
-
 }
 
 .gallery-img-previews {
-    font-size: 0px;
+    font-size: 0;
 }
 
-.gallery-img-previews a{ /*задаем настройки для ссылок, а не для картинок!*/
-    outline: 1px solid yellow;
+.gallery-img-previews a {
     display: inline-block;
-    vertical-align: bottom;
+
     width: 140px;
     margin-right: 20px;
+
+    vertical-align: bottom;
+    /*задаем настройки для ссылок, а не для картинок!*/
+
+    outline: 1px solid yellow;
 }
 
-.gallery-img-previews a:nth-child(3n) { /*тут обязательно ставить :nth-child(3n), а не last, так как при добавлении еще элемента, он не влезет 
+.gallery-img-previews a:nth-child(3n) {
+    /*тут обязательно ставить :nth-child(3n), а не last, так как при добавлении еще элемента, он не влезет 
     и не пройдет проверку на переполнение*/
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .item-content-right {
     float: right;
+
     width: 390px;
+
     outline: 1px solid green;
 }

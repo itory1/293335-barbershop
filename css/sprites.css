@@ -1,0 +1,40 @@
+.v, .f, .insta, .f-black, .insta-black, .v-black{
+	background: url(sprites.png) no-repeat;
+}
+
+.v{
+	background-position: -52px 0;
+	width: 25px;
+	height: 16px;
+}
+
+.f{
+	background-position: -98px -1px ;
+	width: 12px;
+	height: 22px;
+}
+
+.insta{
+	background-position: 0 -3px ;
+	width: 21px;
+	height: 21px;
+}
+
+.f-black{
+	background-position: -99px -52px ;
+	width: 12px;
+	height: 22px;
+}
+
+.insta-black{
+	background-position: 0 -50px ;
+	width: 21px;
+	height: 21px;
+}
+
+.v-black{
+	background-position: -49px -54px ;
+	width: 25px;
+	height: 16px;
+}
+
