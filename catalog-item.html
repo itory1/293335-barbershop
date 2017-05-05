@@ -7,21 +7,23 @@
         <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <header class="page-header">
+    <body class="inner-page">
+        <header class="main-header">
             <div class="container clearfix">
                 <div class="header-logo">
                     <a href="http://barbershop.ru/">
                         <img src="img/header-logo.png" alt="Barbershop" width="111px" height="24px">
                     </a>
                 </div>
-                <ul class="page-nav">
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Прайс-лист</a></li>
-                    <li><a href="/shop/">Магазин</a></li> <!--тут мы вроде не в магазине, а еще глубже - в подменю магазина. Если нажать на магазин, то мы вылезем на первый уровень? По макету так. Это активный пункт. Но да если нажмем, то попадем в магазин-->
-                    <li><a href="#">Контакты</a></li>
-                </ul>
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="#">Информация</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Прайс-лист</a></li>
+                        <li class="active"><a href="/shop/">Магазин</a></li> <!--тут мы вроде не в магазине, а еще глубже - в подменю магазина. Если нажать на магазин, то мы вылезем на первый уровень? По макету так. Это активный пункт. Но да если нажмем, то попадем в магазин-->
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
                 <div class="user-block">
                     <a class="login" href="#">Вход</a>
                 </div>
@@ -34,7 +36,7 @@
                     <li><a href="">Главная</a></li>
                     <li><a href="">Магазин</a></li> 
                     <li><a href="">Средства для ухода</a></li>
-                    <li><a>Набор для путешествий «Baxter of California»</a></li> <!--логическая ссылка-->
+                    <li class="current">Набор для путешествий «Baxter of California»</li>
                 </ul>
             </div>
             <div class="page-content clearfix">
@@ -73,7 +75,7 @@
                 </div> 
             </div> 
         </main>
-        <footer class="main-footer">
+        <footer class="main-footer inner-page-footer">
             <div class="container clearfix">
                 <section class="footer-contacts">
                     Барбершоп «Бородинский»<br>
